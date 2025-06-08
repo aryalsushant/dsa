@@ -8,6 +8,10 @@ start: length of list -1, stop before -1, step -1
 append every item to new list
 return the new list
 easy peasy
+
+alternatively, 
+return lst[::-1] also returns the reversed lst
+::-1 means start from the end and go backward in a step of 1
 """
 
 def reverse_list(lst):
