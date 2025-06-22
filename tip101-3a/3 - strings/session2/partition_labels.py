@@ -20,8 +20,22 @@ Example Output:
 [16]
 """
 def partition_label(s):
-    #loop through string
-    #while string[i]!=
+    last = {}
+    for i in range(len(s)):
+        last[s[i]]=i
+    result = []
+    start = 0
+    end = 0
+
+    for i in range(len(s)):
+        end = max(end, last[s[i]])
+
+        if i == end:
+            result.append(end-start+1)
+            start = i + 1
+    return result
+
+#i dont understand this solution at all tbh but I have to move on to the next
 
 #test case
 s1 = "ababcbacadefegdehijhklij"
