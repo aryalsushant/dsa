@@ -7,6 +7,7 @@ with consecutive spaces reduced to a single space. Assume s can contain leading 
 should be trimmed.
 Do not use any of the built-in trim methods.
 """
+'''
 def squash_spaces(s):
     result = []
     i = 0
@@ -30,6 +31,19 @@ def squash_spaces(s):
         result.pop()
 
     return ''.join(result)
+'''
+def squash_spaces(s):
+    result = []
+    for i in range(0, len(s)):
+        if s[i]!= " ":
+            result.append(s[i])
+        elif s[i] ==" " and s[i-1]!=" " and i>0:
+            result.append(s[i])
+       
+    if result[-1] == " ":
+        result.pop()
+    return "".join(result)
+
 
 
 
