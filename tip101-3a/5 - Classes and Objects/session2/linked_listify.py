@@ -13,8 +13,8 @@ def list_to_linked_list(lst):
 	head = Node(lst[0])
 	current = head
 	
-	for nums in lst[1:]:
-		current.next = Node(nums)
+	for item in lst[1:]:
+		current.next = Node(item)
 		current = current.next
 	
 	return head
