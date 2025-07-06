@@ -29,3 +29,21 @@ def dll_to_sll(dll_head):
 		current_sll = current_sll.next
 		current_dll=current_dll.next
 	return sll_head
+
+#test case
+# Create DLL: Ice <-> Water <-> Steam
+steam = DLLNode("Steam")
+water = DLLNode("Water", next=steam)
+steam.prev = water
+ice = DLLNode("Ice", next=water)
+water.prev = ice
+
+dll_head = ice
+sll_head = dll_to_sll(dll_head)
+
+# Print SLL to check
+current = sll_head
+while current:
+    print(current.value, end=" -> ")
+    current = current.next
+# Output: Ice -> Water -> Steam -> 
