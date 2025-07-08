@@ -34,3 +34,4 @@ n6.prev = n5
 n5.prev = n3
 
 print(get_length(n6))  # Output: 4
+#ok this test case works
