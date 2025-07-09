@@ -24,6 +24,11 @@ def count_element(head, val):
 head = Node(3, Node(1, Node(2, Node(1))))
 print(count_element(head, 1))
 
+#time complexity 0(n) bc we're only traversing once
+#space compexity, 0(1) bc we're not creating anything new(like an array)?? approved answer
+
+#if we were making a new linked list, like when we're manipulating a list, it wouldn't be 0(1)
+
 
 
 
