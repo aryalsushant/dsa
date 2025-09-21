@@ -20,13 +20,13 @@ def nanana_batman(x):
         print("error")
     #but what if x is 0?
     elif x == 0:
-        print("batman")
+        print("batman!")
     else:
         result = ""
         for i in range(x):
             result += "na"
             i +=1
-        print(result +" batman")
+        print(result +" batman!")
 
 nanana_batman(3)
 #edge case:
