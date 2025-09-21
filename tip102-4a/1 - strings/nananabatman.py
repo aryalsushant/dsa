@@ -13,11 +13,11 @@ Input: x = 0
 Output: "batman!"
 """
 def nanana_batman(x):
-    # loop from 0 to x, add a na everythine it increments, at the end print everything
+    # loop from 0 to x, add a na everytime it increments, at the end print everything
     result = ""
     for i in range(x):
         result += "na"
         i +=1
-    return result +" batman"
+    print(result +" batman")
 
-print(nanana_batman(3))
+nanana_batman(3)
