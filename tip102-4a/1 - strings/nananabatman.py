@@ -14,10 +14,20 @@ Output: "batman!"
 """
 def nanana_batman(x):
     # loop from 0 to x, add a na everytime it increments, at the end print everything
-    result = ""
-    for i in range(x):
-        result += "na"
-        i +=1
-    print(result +" batman")
+
+    #what if x is negative
+    if x<0:
+        print("error")
+    #but what if x is 0?
+    elif x == 0:
+        print("batman")
+    else:
+        result = ""
+        for i in range(x):
+            result += "na"
+            i +=1
+        print(result +" batman")
 
 nanana_batman(3)
+#edge case:
+nanana_batman(0)
