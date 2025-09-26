@@ -9,7 +9,7 @@ The string s is considered an acronym of words if it can be formed by concatenat
 def is_acronym(words, s):
     acronym = []
     for word in words:
-        word.split()
+        
         acronym.append(word[0])
 
     #print("".join(acronym))
