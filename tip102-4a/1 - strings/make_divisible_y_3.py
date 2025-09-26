@@ -5,6 +5,7 @@ you can add or subtract 1 from any element of nums. Return the minimum number of
 
  plan: go thru all elements in list
  for each element, if i%3==0 no change, if i%3 == 1 i-1, if i%3 ==2 i+1
+ actually +1 gareni -1 gareni no. of operations 1 nai huncha
 """
 def make_divisible_by_3(nums):
     count = 0
