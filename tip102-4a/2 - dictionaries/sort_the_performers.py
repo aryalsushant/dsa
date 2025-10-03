@@ -13,6 +13,12 @@ def sort_performers(performer_names, performance_times):
     :type performance_times: List[int]
     :rtype: List[str]
     """
+    paired = zip(performer_names, performance_times)
+    #making a list of paired performer names and performance times
+    pairs_sorted = sorted(paired, key = lambda x:x[1], reverse = True )
+    #sorting them
+    return [name for name, _ in pairs_sorted]
+
 
 #test case
 performer_names1 = ["Mary", "John", "Emma"]
