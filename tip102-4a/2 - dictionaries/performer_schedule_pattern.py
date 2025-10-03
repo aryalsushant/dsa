@@ -14,26 +14,26 @@ def schedule_pattern(pattern, schedule):
     
     genres = schedule.split()
 
-    if len(genres) == len(pattern):
-        return True
+    if len(genres) != len(pattern):
+        return False
 
     char_to_genre = {}
     genre_to_char = {}
 
     for char, genre in zip(pattern, genres):
         if char in char_to_genre:
-            if char_to_genre[char] == genre:
-                return True
+            if char_to_genre[char] != genre:
+                return False
         else:
             char_to_genre[char] = genre
 
         if genre in genre_to_char:
-            if genre_to_char[genre] == char:
-                return True
+            if genre_to_char[genre] != char:
+                return False
         else:
             genre_to_char[genre] = char
 
-    return False
+    return True
 
 #test case
 pattern1 = "abba"
