@@ -19,4 +19,22 @@ def find_stage_arrangement_difference(s, t):
     :type t: List[str]
     :rtype: int
     """
-    
+    pos = {}
+    for i in range(len(s)):
+        pos[s[i]]=i
+    total = 0
+
+    #now lets check where each name is in t vs s
+    for j in range(len(t)):
+        name = t[j]
+        total += abs(pos[name]-j)
+    return total
+
+#test case
+s1 = ["Alice", "Bob", "Charlie"]
+t1 = ["Bob", "Alice", "Charlie"]
+s2 = ["Alice", "Bob", "Charlie", "David", "Eve"]
+t2 = ["Eve", "David", "Bob", "Alice", "Charlie"]
+
+print(find_stage_arrangement_difference(s1, t1))
+print(find_stage_arrangement_difference(s2, t2))
